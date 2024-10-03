@@ -19,10 +19,11 @@
     <nav class="side-bar" id="side-bar-div">
         <div id="side-logo-div">
             <img id="logo" src="./assets/logo-dark.svg" alt="logo-dark">
+            <img id="logo-light" src="./assets/logo-light.svg" alt="logo-light" style="display: none;">
         </div>
 
         <div class="boards-nav-links-div" id="boards-nav-links-div">
-            <h4 id="headline-sidepanel">ALL BOARDS</h4>
+          <h4 id="headline-sidepanel">ALL BOARDS</h4>
         </div>
         <div class="side-bar-bottom">
             <div class="toggle-div">
@@ -47,7 +48,8 @@
             <div class="header-name-div">
                 <img src="./assets/logo-mobile.svg" alt="logo-mobile" class="logo-mobile">
                 <h2 class="header-board-name" id="header-board-name"></h2>
-                <button class="dropdownBtn" id="dropdownBtn">
+               
+               <button class="dropdownBtn" id="dropdownBtn">
                     <img src="./assets/icon-chevron-down.svg" alt="icon-chevron-down" class="icon-chevron-down" id="dropDownIcon">
                 </button>
             </div>
@@ -123,7 +125,7 @@
         <form id="edit-task-form">
             <div class="edit-task-div" id="edit-task-header">
                 <input type="text" id="edit-task-title-input" class="task-title-input" placeholder="Task Title">
-                <button id="edit-btn" class="edit-btn"></button>
+                <button id="edit-btn" class="edit-btn">&#9998;</button>
             </div>
             <div class="edit-task-div">
                 <textarea id="edit-task-desc-input" class="edit-task-description-input" placeholder="Task Description"></textarea>
@@ -143,7 +145,6 @@
             </div>
         </form>
     </div>
-
 
     <div id="filterDiv"></div>
 
