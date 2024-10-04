@@ -35,12 +35,13 @@ const elements = {
 let activeBoard = "";
 
 
-// Extracts unique board names from tasks
+// fetch and display board names and tasks
 // TASK: FIX BUGS
 function fetchAndDisplayBoardsAndTasks() {
   const tasks = getTasks();
   const boards = [...new Set(tasks.map(task => task.board).filter(Boolean))];
   displayBoards(boards);
+  //set active board and refresh UI
   if (boards.length > 0) {
     const localStorageBoard = JSON.parse(localStorage.getItem("activeBoard"));
     activeBoard = localStorageBoard ? localStorageBoard : boards[0];
@@ -50,7 +51,7 @@ function fetchAndDisplayBoardsAndTasks() {
   }
 }
 
-// Creates different boards in the DOM
+// displays different boards in the sidebar (roadmap, launch career portal)
 // TASK: Fix Bugs
 function displayBoards(boards) {
   const boardsContainer = document.getElementById("boards-nav-links-div");
@@ -70,7 +71,7 @@ function displayBoards(boards) {
   });
 }
 
-// Filters tasks corresponding to the board name and displays them on the DOM.
+// Filters and display tasks for the active board
 // TASK: Fix Bugs
 function filterAndDisplayTasksByBoard(boardName) {
   const tasks = getTasks(); // Fetch tasks from a simulated local storage function
@@ -106,6 +107,7 @@ function filterAndDisplayTasksByBoard(boardName) {
   });
 }
 
+//Referesh UI
 function refreshTasksUI() {
   filterAndDisplayTasksByBoard(activeBoard);
 }
